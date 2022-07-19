@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Raleway:wght@300&family=Rubik:wght@300&family=Space+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif !important;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+/*card*/
+
+body {
+ color: #737789;
+ font-size: 18px;
+ line-height: 36px;
+ font-weight: 400;
+ background: url("../img/TEAM/tbg.jpg");
+ background-size: cover;
+ background-repeat:no-repeat;
+ background-attachment:fixed;
+ background-position:center center; 
+
+}
+
+    .title{
+        margin-top: -50px;
+        margin-bottom: 90px;
+    }
+
+    .title h3{
+        font-size: 35px;
+    }
+
+
+.team-one {
+  padding-top: 120px;
+  padding-bottom: 90px;
+  position: relative;
+}
+
+[class*=bg-shape-] {
+  position: absolute;
+}
+
+.shape {
+  top: 35px;
+  left: 0;
+}
+
+.team-one .container {
+  position: relative;
+}
+
+.single {
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 60px 0px rgba(46, 61, 98, 0.1);
+  text-align: center;
+  position: relative;
+  padding-bottom: 60px;
+  padding-top: 57px;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 500ms ease;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.2);
+  border-left: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+
+}
+.single:hover {
+   transform: scaleY(1);
+}
+
+.inner {
+   transform-origin: top;
+   transition: transform 500ms ease;
+   transform: scaleY(1);
+}
+
+
+
+.image {
+border-color: red;
+}
+
+
+.single:hover  {
+  border: 5px solid white;
+}
+
+.single h3 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: #252c4b;
+  line-height: 1em;
+  transition: all 500ms ease;
+}
+
+.single p {
+  color: #737789;
+  margin: 0;
+  line-height: 1em;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 44px;
+  transition: all 500ms ease;
+
+}
+
+.single:hover p,
+.single:hover h3 {
+  color: #fff;
+}
+
+
+
+.single:hover .circle::before,
+.single:hover .circle::after {
+  opacity: 0.3;
+   transform: perspective(200px) scaleX(1) scaleY(.8);
+}
+
+
+.single::before {
+  content: '';
+  border-radius: 5px;
+  background-image: linear-gradient(90deg, rgb(44, 171, 255)  0%, #000000 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ transform: scale(1, 0);
+ transform-origin: bottom;
+  transition: transform 500ms ease;
+
+}
+
+.single:hover::before {
+
+          transform: scale(1, 1);
+          transform-origin: top;
+}
+
+     .inner{
+         position: relative;
+     }
+
+     a:hover{
+         text-decoration: none;
+     }
+     .vid
+{
+  position:absolute;
+  right:0;
+  bottom:0;
+  width:auto;
+  height:auto;
+  z-index:-1;
+  min-width:100%;
+  min-height:100%;
+  border-bottom-style: solid !important;
+border-color:#3232FF;
+border-width:2px;
+}
+
+/* tech used */
+
+.services .icon-box {
+  padding: 60px 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 2px 0 35px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+  text-align: center;
+}
+
+.services .icon-box::before {
+  content: '';
+  position: absolute;
+  background: #fdeff2;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.4s;
+  z-index: -1;
+}
+
+.services .icon-box:hover::before {
+  background: #e43c5c;
+  top: 0;
+  border-radius: 0px;
+}
+
+.services .icon {
+  margin-bottom: 15px;
+}
+
+.services .icon i {
+  font-size: 48px;
+  line-height: 1;
+  color: #e43c5c;
+  transition: all 0.3s ease-in-out;
+}
+
+.services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .title a {
+  color: #111;
+}
+
+.services .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.services .icon-box:hover .title a, .services .icon-box:hover .description {
+  color: #fff;
+}
+
+.services {
+  padding-bottom: 30px;
+}
+
+.services .icon-box:hover .icon i {
+  color: #fff;
+}
+
+/*video*/
+.video-background-holder {
+  position: relative;
+  background-color: black;
+  height: calc(100vh - 72px);
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-background-holder video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-background-content {
+  position: relative;
+  z-index: 2;
+}
+
+.video-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}

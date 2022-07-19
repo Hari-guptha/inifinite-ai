@@ -1,0 +1,74 @@
+console.log(req.body);
+    passport.authenticate("local-login",(err,students,info)=>{
+        if(err)
+        {
+            
+            console.log("error occured  in /login",err)
+            res.send(err)
+        }
+        if(!students)
+        {   
+            console.log("error occured  in /login")
+            res.send(info)
+        }
+        else{
+            req.logIn(students,()=>{
+                if(err)
+                {
+                    console.log("error occured  in /login2")
+                }else{
+                res.redirect("/dashboard")
+                }
+            })
+        }
+    })(req,res,next)
+
+
+
+    https://jwt.io/#debugger-io?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gcmFndWwiLCJpYXQiOjE1MTYyMzkwMjJ9.vNuxEHeY1YZUv83W37IxNEVhyDPQVeOvcA_U-Ulxk0o
+
+    https://jwt.io/#debugger-io?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gcmFndWwiLCJpYXQiOjE1MTYyMzkwMjJ9.vNuxEHeY1YZUv83W37IxNEVhyDPQVeOvcA_U-Ulxk0o
+
+
+        <div class="slide-container">
+        <section class="montainer" id="store-products">
+    <%if(student.length>0){%> 
+        <%for (var i=0;i<student.length;i++){%>
+        <div class="store-product watch <%=skill[i].skill_1%> <%=skill[i].skill_2%> <%=skill[i].skill_3%> <%=skill[i].skill_4%> <%=skill[i].skill_5%>">
+            <div class="product-details">
+                <h2><a href="#"><%=student[i].name%></a></h2>
+            </div>
+        </div><%}}else{%>
+            <p>no student found</p>
+            <%}%>
+    </section>
+</div>
+
+
+
+<select  name="selectskill" class="form-select" aria-label="Default select example">
+  <option selected value="1">
+   1
+   </option>
+  <option value="2">
+       1
+   </option>
+  <option value="3"> 
+   1
+   </option>
+  <option value="4"> 
+      1
+   </option>
+  <option value="5"> 
+      1
+   </option>
+</select>
+ <%if(student.length>0){%> 
+        <%for (var i=0;i<student.length;i++){%>
+        <div class="store-product watch <%=student[i].skill_1%> <%=student[i].skill_2%> <%=student[i].skill_3%> <%=student[i].skill_4%> <%=student[i].skill_5%>">
+            <div class="product-details ">
+                <h2><a href="#" class=""><%=student[i].name%></a></h2>
+            </div>
+        </div><%}}else{%>
+            <p>no student found</p>
+            <%}%>

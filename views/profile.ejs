@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>temp</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/css/Navbar.css">
+    <link rel="stylesheet" href="/assets/css/Footer.css">
+    <link rel="stylesheet" href="/assets/css/Inorustyle.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png">
+    <style>
+          #lin{
+	color: #fff !important;
+              
+          }
+          #wrapper{
+	transition:0.5s ease;
+	
+}
+#wrapper:hover
+{
+	transition:0.5s ease !important;
+	box-shadow:5px 5px 15px rgba(0,0,0,.6);
+	
+}
+    </style>
+</head>
+
+<body>
+    
+<!--nav-->
+<nav class="navbar navbar-dark navbar-expand-md navbar-fixed-top navigation-clean-button" style="background: rgb(34, 34, 34);border-radius: 20;border-top-left-radius: 20;border-top-right-radius: 20;border-bottom-right-radius: 20;border-bottom-left-radius: 20;border-style: none;padding-top: 0;padding-bottom: 10px;">
+            <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div><img src="/assets/img/logo.png" style="width: 80px;"><a class="navbar-brand" href="#"> </a></div>
+                <div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(255,255,255);">
+                    <ul class="navbar-nav nav-right">
+                        <li class="nav-item"><a class="nav-link active" href="/" style="color: rgba(224,217,217,0.9);">HOME</a></li>
+                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgba(224,217,217,0.9);">ACADEMIC</a>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="/SEMESTER_MATERIALS">MATERIALS</a><a class="dropdown-item" href="/SYLLABUS">SYLLABUS</a><a class="dropdown-item" href="/SEMESTER_VIDEOS">VIDEO</a></div>
+                        </li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="/TEAM" style="color: rgba(224,217,217,0.9);">TEAM</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/FEEDBACK" style="color: rgba(224,217,217,0.9);">FEEDBACK</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--nav end-->
+        <div class="resume_wrapper" id="wrapper">
+            <div class="resume_left">
+                <div class="resume_image">
+        <img src="/<%=student.imgpath%>">
+                </div>
+                <!-- waste -->
+                <div class="resume_bottom">
+                    <div class="resume_item resume_namerole">
+                        <div class="name"><%=student.name%></div>
+                    </div>
+                    <div class="resume_item resume_profile">
+                        <div class="resume_title">ABOUT ME</div>
+                        <div class="resume_info"> <%=student.about_me%>
+                 </div>
+                    </div>
+                    <div class="resume_item resume_address">
+                        <div class="resume_title">LINKS</div>
+                        <div class="resume_info">
+                  <li> <a  id="lin" href="<%=student.github%>" target="_blank" >Github</a></li>
+        
+                    <li> <a   id="lin"href="<%=student.linked_in%>" target="_blank" >Linked in</a></li>
+                        </div>
+                    </div>
+                    <div class="resume_item resume_contact">
+                        <div class="resume_title">Contact</div> 
+                        <div class="resume_info">
+                            <div class="resume_subtitle">Enrollment Number</div>
+                            <div class="resume_subinfo"><%=student.enrollno%></div>
+                        </div>
+                        <div class="resume_info">
+                            <div class="resume_subtitle">Email</div>
+                            <div class="resume_subinfo"><%=student.email%></div>
+                        </div>
+                    </div>
+                    <div class="resume_item resume_skills">
+                        <div class="resume_title">TECHNICAL Skills</div>
+                        <div class="resume_info">
+                          <%if(student.skill_1){%>
+                          <div class="skills_list">
+                            <div class="skills_left">
+                              <%=student.skill_1%>
+                            </div>
+                            <div class="skills_bar">
+                              <p>
+                                <span style="width: <%=student.skill1_bar%>%"></span>
+                              </p>
+                            </div>
+                          </div><%}%>
+                          <%if(student.skill_2){%>
+                          <div class="skills_list">
+                            <div class="skills_left">
+                              <%=student.skill_2%>
+                            </div>
+                            <div class="skills_bar">
+                              <p>
+                                <span style="width: <%=student.skill2_bar%>%"></span>
+                              </p>
+                            </div>
+                          </div><%}%>
+                          <%if(student.skill_3){%>
+                          <div class="skills_list">
+                            <div class="skills_left">
+                              <%=student.skill_3%>
+                            </div>
+                            <div class="skills_bar">
+                              <p>
+                                <span style="width: <%=student.skill3_bar%>%"></span>
+                              </p>
+                            </div>
+                          </div><%}%>
+                          <%if(student.skill_4){%>
+                          <div class="skills_list">
+                            <div class="skills_left">
+                              <%=student.skill_4%>
+                            </div>
+                            <div class="skills_bar">
+                              <p>
+                                <span style="width:<%=student.skill4_bar%>%"></span>
+                              </p>
+                            </div>
+                          </div><%}%>
+                          <%if(student.skill_5){%>
+                          <div class="skills_list">
+                            <div class="skills_left">
+                              <%=student.skill_5%>
+                            </div>
+                            <div class="skills_bar">
+                              <p>
+                                <span style="width:<%=student.skill5_bar%>%"></span>
+                              </p>
+                            </div>
+                          </div><%}%>
+                        </div>
+                      </div>
+        
+                    
+        
+        
+                </div>
+            </div>
+            <div class="resume_right">
+                <div class="resume_item resume_namerole">
+                    <div class="name"><%=student.name%></div>
+                    
+                </div>
+                <div class="resume_item resume_education">
+                    <div class="resume_title">Education</div>
+                    <div class="resume_info">
+                        <div class="resume_data">
+                            <div class="year"><%=student.school_year%></div>
+                            <div class="content">
+                                <p><%=student.school%></p>
+                                <p>percentage:<%=student.school_percent%>%</p>
+                            </div>
+                        </div>
+                        <div class="resume_data">
+                            <div class="year"><%=student.clg_year%></div>
+                            <div class="content">
+                                <p>UNDERGRADUATE</p>
+                                <p>SRI MANAKULA VINAYAGAR ENGINEERING COLLEGE</p>
+                                <p>CGPA:<%=student.cgpa%></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume_item resume_experience">
+                    <div class="resume_title">PROJECTS AND Experience</div>
+                    <div class="resume_info">
+                        <div class="resume_data">
+                            
+                            <div class="">
+                                
+                                <p style="font-size:19px;padding-top:7px"><%=student.project%></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+        
+                <div class="resume_item resume_experience">
+                    <div class="resume_title">ACHIEVEMENTS</div>
+                    <div class="resume_info">
+                        <div class="resume_data">
+                            
+                            <div class=""style="font-size:19px; padding-top:7px">
+                                
+                                <p><%=student.achievement%></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+        
+        
+                <div class="resume_item resmue_interests">
+                    <div class="resume_title">HOBBIES</div>
+                    <div class="resume_info">
+                        <div class="interests">
+                            
+                            <div class=""style="font-size:19px; padding-top:7px"	><%=student.hobby%></div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--footer-->
+<footer class="footer-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3 item">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a href="/">Home</a></li> 
+                    <li><a href="/SEMESTER_MATERIALS">Material</a></li>
+                    <li><a href="/SYLLABUS">Syllabus</a></li>
+                    <li><a href="/SEMESTER_VIDEOS">Videos</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-3 item">
+                <h3>ABOUT US</h3>
+                <ul>
+                    
+                    <li><a href="/TEAM">Team</a></li>
+                    <li><a href="/FEEDBACK">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 item text">
+                <h3>INFO</h3>
+                <p>Sri Manakula Vinayagar Engineering College is contended in pioneering a leading edge program B.Tech – Artificial intelligence and Data science, an undergraduate program with advanced learning solutions imparting knowledge of advanced innovations in these two buzz word towards which various industries are moving towards irrespective of their field.</p>
+            </div>
+            <div class="col item social"><a href="https://www.facebook.com/profile.php?id=100073342620201"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/AI_DS1"><i class="icon ion-social-twitter"></i></a><a href="https://www.instagram.com/_AI_DS_/"><i class="icon ion-social-instagram"></i></a></div>
+        </div>
+     <p class="copyright">ALL RIGHTS RESERVED BY INFINIT AI  </p>
+     <p class="copyright">POWERED BY TITANS </p>
+    </div>
+</footer>
+<!--end of footer-->
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

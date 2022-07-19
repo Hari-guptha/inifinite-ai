@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--smvec-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Forgot|smvec</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/css/Navbar.css">
+    <link rel="stylesheet" href="/assets/css/Footer.css">
+</head>
+
+<body>
+          <!--nav-->
+          <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button" style="background: rgb(34, 34, 34);border-radius: 20;border-top-left-radius: 20;border-top-right-radius: 20;border-bottom-right-radius: 20;border-bottom-left-radius: 20;border-style: none;padding-top: 0;padding-bottom: 10px;">
+            <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div><img src="/assets/img/logo.png" style="width: 110px;"><a class="navbar-brand" href="#"> </a></div>
+                <div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(255,255,255);">
+                    <ul class="navbar-nav nav-right">
+                        <li class="nav-item"><a class="nav-link active" href="index.html" style="color: rgba(224,217,217,0.9);">PROFILE</a></li>
+                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgba(224,217,217,0.9);">ACADEMIC</a>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="services.html">MATERIALS</a><a class="dropdown-item" href="#">VIDEO</a></div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html" style="color: rgba(224,217,217,0.9);">STAFFS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faq.html" style="color: rgba(224,217,217,0.9);">TEAM</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" style="color: rgba(224,217,217,0.9);">FEEDBACK</a></li>
+                    </ul>
+                   
+                </div>
+            </div>
+        </nav>
+        <!--nav end-->
+    <section class="login-dark" style="background: url(&quot;/assets/img/l-bg.jpg&quot;) no-repeat;background-size: cover;">
+
+        <form class="needs-validation" novalidate method="post" action="/reset/<%=token%>" >
+            <h2 class="visually-hidden">Forgot password</h2>
+          
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            <%if(error.length>0){%>
+                <div class="alert alert-danger" role="alert">
+                    <%=error%>
+                  </div>
+                  <%}%>
+            <div class="mb-3">
+                
+            <input class="form-control" type="password" name="password1" placeholder="Password" required id="enroll" onselectstart=" false" onpaste=" false;" onCopy="false" onCut="false" onDrag=" false" onDrop=" false">
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                   <div class="invalid-feedback">
+                                    Please enter your Password.
+                                  </div>
+            </div>
+            <div class="mb-3">
+                
+                <input class="form-control" type="password" name="password2" placeholder="Password" required id="enroll" onselectstart=" false" onpaste=" false;" onCopy="false" onCut="false" onDrag=" false" onDrop=" false">
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                       <div class="invalid-feedback">
+                                        Please enter your Password.
+                                      </div>
+                </div>
+            </div>
+            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" >Reset Password</button></div>
+          
+        </form>
+    </section>
+       <!--footer-->
+       <footer class="footer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">metrial</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>About us</h3>
+                    <ul>
+                        <li><a href="#">Staffs</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>Info</h3>
+                    <p>Sri Manakula Vinayagar Engineering College is contended in pioneering a leading edge program B.Tech – Artificial intelligence and Data science, an undergraduate program with advanced learning solutions imparting knowledge of advanced innovations in these two buzz word towards which various industries are moving towards irrespective of their field.</p>
+                </div>
+                <div class="col item social"><a href="https://www.facebook.com/profile.php?id=100073342620201"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/AI_DS1"><i class="icon ion-social-twitter"></i></a><a href="https://www.instagram.com/_AI_DS_/"><i class="icon ion-social-instagram"></i></a></div>
+            </div>
+            <p class="copyright">POWERED by TITANS</p>
+        </div>
+    </footer>
+    <!--end of footer-->
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    
+
+    <script>
+		// Example starter JavaScript for disabling form submissions if there are invalid fields
+    
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+		</script>
+</body>
+
+</html>

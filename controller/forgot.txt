@@ -1,0 +1,63 @@
+const  route=require("express").Router()
+const student= require("../model/student")
+route.get('/reset/:token', function(req, res) {
+    student.findOneAndUpdate({ resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, function(err, student) {
+      if (!student) {
+        req.flash('error', 'Password reset token is invalid or has expired.');
+        return res.redirect('/forgot');
+      }
+      res.render('reset', {
+        student: req.student
+      });
+    });
+  });
+
+  
+    
+    
+    
+  route.post('/reset/:token', function(req, res) {
+    async.waterfall([
+      function(done) {
+        student.findOne({ resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, function(err, student) {
+          if (!student) {
+            req.flash('error', 'Password reset token is invalid or has expired.');
+            return res.redirect('back');
+          }
+  
+          student.password = req.body.password;
+          student.resetPasswordToken = undefined;
+          student.resetPasswordExpires = undefined;
+  
+          student.save(function(err) {
+            req.logIn(student, function(err) {
+              done(err, student);
+            });
+          });
+        });
+      },
+      function(student, done) {
+        var smtpTransport = nodemailer.createTransport('SMTP', {
+          service: 'SendGrid',
+          auth: {
+            student: '!!! YOUR SENDGRID studentNAME !!!',
+            pass: '!!! YOUR SENDGRID PASSWORD !!!'
+          }
+        });
+        var mailOptions = {
+          to: student.email,
+          from: 'passwordreset@demo.com',
+          subject: 'Your password has been changed',
+          text: 'Hello,\n\n' +
+            'This is a confirmation that the password for your account ' + student.email + ' has just been changed.\n'
+        };
+        smtpTransport.sendMail(mailOptions, function(err) {
+          req.flash('success', 'Success! Your password has been changed.');
+          done(err);
+        });
+      }
+    ], function(err) {
+      res.redirect('/');
+    });
+  });
+module.exports=route

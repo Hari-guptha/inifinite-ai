@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Dashboard</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="assets/css/Inorustyle.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+  <style>
+/*others*/
+  
+.row{
+  width: 300px;
+  transform: translateX(500px);
+}
+.button4 {
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #1a73e8;
+  padding: 11px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.button4:hover {
+  background: #3786ed;
+  text-decoration: none;
+}
+@media only screen and (min-width:300px) and  (max-width:400px) {
+  .row{
+    position: absolute;
+    transform: translateX(40px);
+  }
+  .button4{
+    position: absolute;
+    transform: translatex(50px);
+  }
+}
+@media only screen and (min-width:410px) and  (max-width:510px) {
+  .row{
+    position: absolute;
+    transform: translateX(50px);
+  }
+  .button4{
+    position: absolute;
+    transform: translatex(0px);
+  }
+}
+@media only screen and (min-width:520px) and  (max-width:620px) {
+  .row{
+    position: absolute;
+    transform: translateX(60px);
+  }
+  .button4{
+    position: absolute;
+    transform: translatex(160px);
+  }
+}
+@media only screen and (min-width:630px) and  (max-width:730px) {
+  .row{
+    position: absolute;
+    transform: translateX(70px);
+  }
+  .button4{
+    position: absolute;
+    transform: translatex(180px);
+  }
+}
+@media only screen and (min-width:740px) and  (max-width:840px) {
+  .row{
+    position: absolute;
+    transform: translateX(80px);
+  }
+  .button4{
+    position: absolute;
+    transform: translatex(-20px);
+  }
+}
+
+  </style>
+</head>
+<body>
+  
+<!-- ! Body -->
+
+
+<div class="page-flex">
+  <!-- ! Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-start">
+        <div class="sidebar-head">
+            <a href="#" class="logo-wrapper" title="Home">
+                <span class="sr-only">Home</span>
+                <div class="logo-text">
+                    <span class="logo-title">Artificial Intelligence and Data Science</span>
+                    <span class="logo-subtitle">Dashboard</span>
+                </div>
+
+            </a>
+            <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
+                <span class="sr-only">Toggle menu</span>
+                <span class="icon menu-toggle" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="sidebar-body">
+            <ul class="sidebar-body-menu">
+                <li>
+                    <a href="/"><span class="icon home" aria-hidden="true"></span>Home</a>
+                </li>
+                <li>
+                  <a href="/profile_search"><span class="icon image" aria-hidden="true"></span>profile</a>
+              </li>
+              <li>
+                <a href="/qrcode"><span class="icon paper" aria-hidden="true"></span>QR code</a>
+            </li>
+                <li>
+                  <a href="/logout">
+                      <span class="icon message" aria-hidden="true"></span>
+                      logout
+                  </a>
+                  </li>
+				  <li><a href="/edit">
+				<span class="icon edit" aria-hidden="true"></span>Edit profile</a>
+                </li>
+			  
+            </ul>
+            
+            <ul class="sidebar-body-menu">
+               
+                <li>
+                    <a class="show-cat-btn" href="##">
+                        
+                    </a>
+                    
+                </li>
+                <li>
+                    
+                    <ul class="cat-sub-menu">
+                        
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+   
+</aside>
+
+  <div class="main-wrapper">
+    <!-- ! Main nav -->
+    
+    <nav class="main-nav--bg">
+  <div class="container main-nav">
+    <div class="main-nav-start">
+      
+    </div>
+    <div class="main-nav-end">
+      <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
+        <span class="sr-only">Toggle menu</span>
+        <span class="icon menu-toggle--gray" aria-hidden="true"></span>
+      </button>
+      
+      <button class="theme-switcher gray-circle-btn" type="button" title="Switch theme">
+        <span class="sr-only">Switch theme</span>
+        <i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
+        <i class="moon-icon" data-feather="moon" aria-hidden="true"></i>
+      </button>
+      
+       
+      <div class="nav-user-wrapper">
+        <button href="##" class="nav-user-btn dropdown-btn" title="My profile" type="button">
+          <span class="sr-only">My profile</span>
+          <span class="nav-user-img">
+            <picture><source srcset="/<%=student.imgpath%>    " type="image/webp"><img src=" /<%=student.imgpath%>" alt="User name"></picture>
+          </span>
+        </button>
+        <ul class="users-item-dropdown nav-user-dropdown dropdown">
+          <li><a href="##">
+              <i data-feather="user" aria-hidden="true"></i>
+              <span>Profile</span>
+            </a></li>
+          <li><a class="danger" href="##">
+              <i data-feather="log-out" aria-hidden="true"></i>
+              <span>Log out</span>
+            </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+  <!--Resume--> 
+      <div class="resume_wrapper" id="wrapper">
+      <div class="resume_left">
+        <div class="resume_image">
+    <img src="/<%=student.imgpath%>">
+        </div>
+        <!-- waste -->
+        <div class="resume_bottom">
+          <div class="resume_item resume_namerole">
+            <div class="name"><%=student.name%></div>
+          </div>
+          <div class="resume_item resume_profile">
+            <div class="resume_title">ABOUT ME</div>
+            <div class="resume_info"> <%=student.about_me%>
+            </div>
+          </div>
+          <div class="resume_item resume_address">
+            <div class="resume_title">LINKS</div>
+            <div class="resume_info">
+            <li> <a href="<%=student.github%>" target="_blank" >Github</a></li>
+
+            <li> <a href="<%=student.linked_in%>" target="_blank" >Linked in</a></li>
+            </div>
+          </div>
+          <div class="resume_item resume_contact">
+            <div class="resume_title">Contact</div> 
+            <div class="resume_info">
+              <div class="resume_subtitle">Enrollment Number</div>
+              <div class="resume_subinfo"><%=student.enrollno%></div>
+            </div>
+            <div class="resume_info">
+              <div class="resume_subtitle">Email</div>
+              <div class="resume_subinfo"><%=student.email%></div>
+            </div>
+          </div>
+          <div class="resume_item resume_skills">
+            <div class="resume_title">TECHNICAL Skills</div>
+            <div class="resume_info">
+              <%if(student.skill_1){%>
+              <div class="skills_list">
+                <div class="skills_left">
+                  <%=student.skill_1%>
+                </div>
+                <div class="skills_bar">
+                  <p>
+                    <span style="width: <%=student.skill1_bar%>%"></span>
+                  </p>
+                </div>
+              </div><%}%>
+              <%if(student.skill_2){%>
+              <div class="skills_list">
+                <div class="skills_left">
+                  <%=student.skill_2%>
+                </div>
+                <div class="skills_bar">
+                  <p>
+                    <span style="width: <%=student.skill2_bar%>%"></span>
+                  </p>
+                </div>
+              </div><%}%>
+              <%if(student.skill_3){%>
+              <div class="skills_list">
+                <div class="skills_left">
+                  <%=student.skill_3%>
+                </div>
+                <div class="skills_bar">
+                  <p>
+                    <span style="width: <%=student.skill3_bar%>%"></span>
+                  </p>
+                </div>
+              </div><%}%>
+              <%if(student.skill_4){%>
+              <div class="skills_list">
+                <div class="skills_left">
+                  <%=student.skill_4%>
+                </div>
+                <div class="skills_bar">
+                  <p>
+                    <span style="width:<%=student.skill4_bar%>%"></span>
+                  </p>
+                </div>
+              </div><%}%>
+              <%if(student.skill_5){%>
+              <div class="skills_list">
+                <div class="skills_left">
+                  <%=student.skill_5%>
+                </div>
+                <div class="skills_bar">
+                  <p>
+                    <span style="width:<%=student.skill5_bar%>%"></span>
+                  </p>
+                </div>
+              </div><%}%>
+            </div>
+          </div>
+
+          
+
+
+        </div>
+      </div>
+      <div class="resume_right">
+        <div class="resume_item resume_namerole">
+          <div class="name"><%=student.name%></div>
+          
+        </div>
+        <div class="resume_item resume_education">
+          <div class="resume_title">Education</div>
+          <div class="resume_info">
+            <div class="resume_data">
+              <div class="year"><%=student.school_year%></div>
+              <div class="content">
+                <p><%=student.school%></p>
+                <p>percentage:<%=student.school_percent%>%</p>
+              </div>
+            </div>
+            <div class="resume_data">
+              <div class="year"><%=student.clg_year%></div>
+              <div class="content">
+                <p>UNDERGRADUATE</p>
+                <p>SRI MANAKULA VINAYAGAR ENGINEERING COLLEGE</p>
+                <p>CGPA:<%=student.cgpa%></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="resume_item resume_experience">
+          <div class="resume_title">PROJECTS AND Experience</div>
+          <div class="resume_info">
+            <div class="resume_data">
+              
+              <div class="">
+                
+                <p style="font-size:19px;padding-top:7px"><%=student.project%></p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="resume_item resume_experience">
+          <div class="resume_title">ACHIEVEMENTS</div>
+          <div class="resume_info">
+            <div class="resume_data">
+              
+              <div class=""style="font-size:19px; padding-top:7px">
+                
+                <p><%=student.achievement%></p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+
+        <div class="resume_item resmue_interests">
+          <div class="resume_title">HOBBIES</div>
+          <div class="resume_info">
+            <div class="interests">
+              
+              <div class=""style="font-size:19px; padding-top:7px"	><%=student.hobby%></div>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+  <!-- resume ends  -->
+  <div class="row">
+  <div class="col-md-5"></div>
+  <div class="col-md-3"><button class="button4" id="down" style="background-color:#1a73e8">DOWNLOAD PDF</button></div>
+</div>
+</div>
+<br>
+<br>
+
+<!-- Icons library -->
+<script src="/assets/plugin/feather.min.js"></script>
+<!-- Custom scripts -->
+<script src="/assets/js/script.js"></script>
+<script>
+  window.onload = function () {
+    document.getElementById("down")
+        .addEventListener("click", () => {
+            const invoice = this.document.getElementById("wrapper");
+            console.log(invoice);
+            console.log(window);
+            var opt = {
+                margin: 1,
+                filename: 'myresume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 0.9 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+                
+            };
+            html2pdf().from(invoice).set(opt).save();
+        })
+}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Raleway:wght@300&family=Rubik:wght@300&family=Space+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif !important;
+}
+body{
+    background-color: black;
+}
+.btn:hover{
+    background-color: white !important;
+    color: black !important;
+}
+#nav
+{	
+  
+	background-color:	rgba(255,255,255,0) !important;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.2);
+  border-left: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+
+}
+#navcont
+{
+margin-left:760px !important;
+}
+
+.dropdown-menu
+{
+    
+	color:white !important;
+	margin-left:980px !important;
+}
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+        width:100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #videoBG {
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width: 769px) {
+    #videoBG {
+        display: none;
+    }
+    body {
+        background-color: black;
+       
+    }
+#navcont
+{
+
+margin-left:0px !important;
+}
+
+.dropdown-menu
+{ 	width:20px;
+	color:black !important;
+	margin-left:0px !important;
+}
+#navbarDropdownMenuLink{
+	width:110px;
+}
+	#link
+{
+color:white ;
+display:flex;
+justify-content:center;
+text-decoration:none;
+}
+.link{
+	display:flex;
+justify-content:center;
+}
+	#reserved{
+			display:flex;
+justify-content:center;
+}
+		
+}
+
+/*footer*/
+#links
+{
+color:white ;
+list-style-type: none !important ;
+  margin: 0;
+  padding: 0;
+}
+#link
+{
+color:white ;
+display:flex;
+align-items:start;
+text-decoration:none;
+}
+.link{
+	display:flex;
+align-items:center;
+}
+#link:hover{
+color:grey;
+text-decoration:underline;
+
+}
+.followlink
+{
+list-style-type: none !important ;
+  margin: 0 !important;
+  padding: 0;
+}
+#reserved
+{
+	background-color:black;
+	overflow:hidden !important;
+	
+}
+/*body*/
+.card{
+	transition:0.5s ease;
+	
+}
+.card:hover
+{
+	transition:0.5s ease !important;
+	box-shadow:5px 5px 15px rgba(0,0,0,.6);
+	
+}
+.btn:hover
+{
+	background-color: #145bdf !important    ;
+	color:rgb(255, 255, 255) !important;
+	box-shadow:0 0 5px #0d6efd,0 0 20px #0d6efd ;
+}
+
+input{
+background-color: #eff0f6 !important;
+} 
+textarea{
+    background-color: #eff0f6 !important;
+}   
